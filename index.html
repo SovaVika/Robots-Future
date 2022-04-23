@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <div class="box2">
+        <div id="carousel" class="carousel">
+            <button class="arrow prev">⇦</button>
+            <div class="gallery">
+                <ul>
+                    <li><img src="img/1.jpg">
+                    </li>
+                    <li>
+                        <div class="boxx"></div>
+                    </li>
+                    <li><img src="img/2.jpg"></li>
+                    <li>
+                        <div class="boxx"></div>
+                    <li><img src="img/3.jpg"></li>
+                    <li>
+                        <div class="boxx"></div>
+                    <li><img src="img/4.jpg"></li>
+                    <li>
+                        <div class="boxx"></div>
+                    <li><img src="img/5.jpg"></li>
+                    <li>
+                        <div class="boxx"></div>
+                    <li><img src="img/6.jpg"></li>
+                    <li>
+                        <div class="boxx"></div>
+                    <li><img src="img/7.jpg"></li>
+                    <li>
+                        <div class="boxx"></div>
+                    <li><img src="img/8.jpg"></li>
+                    <li>
+                        <div class="boxx"></div>
+                    <li><img src="img/9.jpg"></li>
+                    <li>
+                        <div class="boxx"></div>
+                    <li><img src="img/10.jpg"></li>
+                </ul>
+            </div>
+            <button class="arrow next">⇨</button>
+        </div>
+
+        <script>
+            // код для видимости всех картинок а не только трех
+            let i = 1;
+            for
+                // код прокрутки
+                (let li of carousel.querySelectorAll('li')) {
+                li.style.position = 'relative';
+                li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+                i++;
+            }
+
+            let width = 130; // ширина картинки
+            let count = 1; // видимое количество изображений
+
+            let list = carousel.querySelector('ul');
+            let listElems = carousel.querySelectorAll('li');
+
+            let position = 0; // положение ленты прокрутки
+
+            carousel.querySelector('.prev').onclick = function () {
+                position += width * count;
+                // код чтоб корусель нельзя было прокрутить до места где нет картинок слева
+                position = Math.min(position, 0)
+                list.style.marginLeft = position + 'px';
+            };
+
+            carousel.querySelector('.next').onclick = function () {
+                position -= width * count;
+                // код чтоб корусель нельзя было прокрутить до места где нет картинок справа
+                position = Math.max(position, -width * (listElems.length - count));
+                list.style.marginLeft = position + 'px';
+            };
+        </script>
+    </div>
+
+    <div class="container">
+
+        <div class="animate one">
+            <a href="https://www.vokrugsveta.ru/vs/article/6367/">
+                <span>В</span><span>п</span><span>е</span><span>р</span><span>е</span><span>д</span> &nbsp;
+                <span>в</span> &nbsp;
+                <span>б</span><span>у</span><span>д</span><span>у</span><span>щ</span><span>е</span><span>е</span>
+            </a>
+        </div>
+    </div>
+
+    <iframe class="v1" width="560" height="315" src="https://www.youtube.com/embed/ZdKIIiRHrZs"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <div class="box">
+
+        <img width="400" height="220" class="img2" src="img/робот. ххххххххххххххххххмммммммммммммм.webp" align="left">
+
+        <h1 class="№1">Интересный факт №1</h1>
+
+        <span class="sp"> Термин «искусственный интеллект» ввел в 1956 году американский профессор математики Джон
+            Маккарти. Он предположил, что
+            точные науки способны описать человеческие мысли и рассуждения, и поэтому воспоминания и идеи могут быть
+            выражены
+            алгоритмами. Ученый вместе с коллегами организовал семинар в Дармутском колледже, по итогам которого была
+            заложена общая
+            методика исследования ИИ и создано профессиональное сообщество.</span>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="box">
+
+        <img width="400" height="220" class="img2" src="img/робот 3.jpg" align="right">
+
+        <h1 class="№1">Интересный факт №2</h1>
+
+        <span class="sp"> Интерес к созданию механизированных машин зародился не в прошлом столетии, а намного раньше.
+            Можно вспомнить изобретение
+            печатного станка в середине 1440-х годов или прогресс в области механики в XVI-XVII вв. Он привел к
+            распространению моды
+            на «автономы» – механические фигуры людей и животных, способных выполнять сложные движения и имитировать
+            отдельные
+            элементы поведения живых существ.</span>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="box">
+
+        <img width="400" height="220" class="img2" src="img/роботы 4.jpg" align="left">
+
+        <h1 class="№1">Интересный факт №3</h1>
+
+        <span class="sp"> В определенных областях ИИ уже превосходит человеческие способности. К примеру, недавно
+            AlphaGo стала первой
+            компьютерной программой, которая одолела в матче по го одного из сильнейших игроков в истории этой игры. А
+            ведь го – это
+            древняя и очень сложная игра, тонкости которой раньше были неподвластны алгоритмам искусственного
+            интеллекта.
+        </span>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="flex">
+        <div class="tr"></div>
+        <div class="tr2"></div>
+    </div>
+
+
+
+    <div class="square">
+        <div class="rb2"></div>
+
+        <b class="rb2">
+            <a class="rb2" href="">
+                <span>Главная страница</span>
+                ▼</b></a>
+
+        <a class="rb2" href="Новости/Новости.html">
+            <b class="rb2">
+                <span>Новости</span>
+                ▼</b>
+        </a>
+
+        <a class="rb2" href="Статьи/Статьи.html"><b class="rb2">
+                <span>Статьи</span>
+                ▼</b></a>
+
+        <a class="rb2" href="О нас/О нас.html"><b class="rb2">
+                <span>О нас</span>
+                ▼</b></a>
+
+    </div>
+
+
+
+    <div class="square2">
+        <br>
+
+        <img width="110px" class="vikaa" src="img/робот).jpg" alt="">
+
+        <span class="contacts">
+            Номер телефона: 0675288657
+        </span>
+        <br>
+        <br>
+        <span>
+
+            <a class="contacts" href="https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B1%D0%BE%D1%82"> Хочешь узнать
+                больше жми сюда
+            </a>
+
+        </span>
+    </div>
+
+    <div class="square5">
+        <p class="coment">
+            Коментарии
+        </p>
+
+        <br>
+
+
+
+        <div>
+            <img class="me2" width="100px" src="img/ава1.jpg" alt="">
+        </div>
+
+        <div class="boxx1">
+            <big><big><big><big>Крутой сайт!</big></big></big></big>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div>
+            <img class="me2" width="100px" src="img/ава2.jpg" alt="">
+        </div>
+
+        <div class="boxx2">
+            <big><big><big><big> Удачи в развитии😇 </big></big></big></big>
+        </div>
+
+
+
+
+    </div>
